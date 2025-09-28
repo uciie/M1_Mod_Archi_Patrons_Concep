@@ -3,7 +3,7 @@ package org.example.tds.td2;
 import java.util.List;
 import java.util.ArrayList;
 
-import org.example.cards.cours3.Card;
+//import org.example.cards.cours3.Card;
 import org.example.cards.cours3.Deck;
 
 public class MultiDeck {
