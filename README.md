@@ -1,2 +1,2 @@
-# M1_Mod-lisation_Archi_Patrons_Conception-MAPC-
+# M1_Mod_Archi_Patrons_Concep
 Modélisation Architecturale et Patrons de Conception (MAPC) 
