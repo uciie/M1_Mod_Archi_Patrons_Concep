@@ -3,8 +3,10 @@
 *.class
 # Ignore Gradle project-specific cache directory
 .gradle
+.metals
 
 # Ignore Gradle build output directory
 build
 examen/
 app/build/
+out/

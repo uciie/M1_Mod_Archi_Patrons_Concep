@@ -11,7 +11,7 @@ public class ICardTest {
     protected void testComparator(Comparator<ICard> comparator, ICard c1, ICard c2, int expected) {
         assertEquals(expected, comparator.compare(c1, c2));
     }
-    }
+    
 
     protected void testRankComparator(ICard c1, ICard c2, int expected) {
         testComparator(ICard.rankComparator(), c1, c2, expected);

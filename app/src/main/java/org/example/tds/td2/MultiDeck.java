@@ -28,6 +28,19 @@ public class MultiDeck {
          }
     }
 
+    public static MultiDeck deepCopy(MultiDeck multiDeck) {
+        MultiDeck copy = new MultiDeck(1); // on crée un MultiDeck avec 1 Deck
+        copy.decks.clear(); // on enlève ce Deck
+        for (Deck deck : multiDeck.decks) {
+            copy.decks.add(new Deck(deck)); // on ajoute des copies des Decks
+        }
+        return copy;
+    }
+
+    public List<Deck> getDecks() {
+        return new ArrayList<>(decks);
+    }
+
     public Card draw() {
         assert size() > 0;
         // on sait qu'il existe un deck non vide donc OK de faire get sur un Optional<Deck>.

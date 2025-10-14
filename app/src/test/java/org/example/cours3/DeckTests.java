@@ -1,9 +1,7 @@
 package org.example.cours3;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 import org.example.cards.cours3.Deck;
 

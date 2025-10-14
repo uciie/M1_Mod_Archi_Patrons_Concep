@@ -1,9 +1,9 @@
 package org.example.cours4;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import org.example.cards.cours4.metier.api.ICard;
 import org.example.cards.cours4.metier.impl.Card;
@@ -17,14 +17,14 @@ public class CardTest extends ICardTest {
 
     // on pourrait rajouter des property based testing sur les relations compareTo/equals/hashCode
 
-    @Before
+    @BeforeEach
     public void setUp() {
         aceOfHearts = new Card(ACE, HEARTS);
         twoOfHearts = new Card(TWO, HEARTS);
         twoOfSpades = new Card(TWO, SPADES);
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         aceOfHearts = null;
         twoOfHearts = null;

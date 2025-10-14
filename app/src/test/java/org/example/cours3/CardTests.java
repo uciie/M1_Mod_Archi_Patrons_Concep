@@ -4,10 +4,8 @@ import org.example.cards.cours3.Card;
 import static org.example.cards.cours3.Card.Suit.*;
 import static org.example.cards.cours3.Card.Rank.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 public class CardTests {
 
