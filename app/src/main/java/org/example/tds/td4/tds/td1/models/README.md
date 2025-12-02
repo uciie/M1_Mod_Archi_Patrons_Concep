@@ -1,2 +1,0 @@
-Normalement on ne mélangerait pas les modèles et le code.
-Ici pour faire simple on met les modèles avec le code au lieu d'utiliser un répertoire de modèles dont la structure suit éventuellement celle du code source (même principe que pour les tests).

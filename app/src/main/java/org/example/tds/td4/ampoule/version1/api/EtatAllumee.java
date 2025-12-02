@@ -1,4 +1,4 @@
-package org.example.ampoule.version1.api;
+package org.example.tds.td4.ampoule.version1.api;
 
 public class EtatAllumee implements EtatAmpoule {
 

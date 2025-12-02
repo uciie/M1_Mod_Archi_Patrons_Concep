@@ -1,7 +1,9 @@
 package org.example.cours3;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.example.cards.cours3.Deck;
 
@@ -9,21 +11,19 @@ public class DeckTests {
  
     private Deck deck;
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         deck = new Deck();
     }
 
-    @After
-    public void tearDown() {
+    @AfterEach
+    void tearDown() {
         deck = null;
     }   
 
     @Test
-    public void sizeIsCorrect() {
+    void sizeIsCorrect() {
         assertEquals(52,deck.size());
     }
-
-    // TODO: more tests
 
 }

@@ -1,7 +1,7 @@
-package org.example.ampoule.version1.client;
+package org.example.tds.td4.ampoule.version1.client;
 
-import org.example.ampoule.version1.api.Ampoule;
-import org.example.ampoule.version1.api.ActionIllegale;
+import org.example.tds.td4.ampoule.version1.api.Ampoule;
+import org.example.tds.td4.ampoule.version1.api.ActionIllegale;
 
 public class App {
     public static void main(String[] args) {

@@ -4,8 +4,10 @@ import static org.example.cards.cours4.metier.api.ICard.Rank.*;
 import static org.example.cards.cours4.metier.api.ICard.Suit.*;
 import org.example.cards.cours4.metier.impl.Card;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Tests unitaires pour la classe Hand :
@@ -16,14 +18,14 @@ import static org.junit.Assert.*;
 public class HandTest {
 
     @Test
-    public void mainInitialementVide() {
+    void mainInitialementVide() {
         IHand emptyHand = new Hand(5);
-        assertEquals("Une main vide doit avoir une taille de 0", 0, emptyHand.size());
-        assertTrue("Une main vide doit être marquée vide", emptyHand.isEmpty());
+        assertEquals(0, emptyHand.size(), "Une main vide doit avoir une taille de 0");
+        assertTrue(emptyHand.isEmpty(), "Une main vide doit être marquée vide");
     }
 
     @Test
-    public void ajouterUneCarteChangeLaTaille() {
+    void ajouterUneCarteChangeLaTaille() {
         final int MAX = 5;
         IHand hand = new Hand(MAX);
 
@@ -34,12 +36,11 @@ public class HandTest {
         int tailleAvant = hand.size();
         hand.add(new Card(ACE, HEARTS));
 
-        assertEquals("Ajouter une carte doit augmenter la taille de 1",
-                     tailleAvant + 1, hand.size());
+        assertEquals(tailleAvant + 1, hand.size(), "Ajouter une carte doit augmenter la taille de 1");
     }
 
     @Test
-    public void ajouterMaxCartesAtteintLeMax() {
+    void ajouterMaxCartesAtteintLeMax() {
         final int MAX = 5;
         IHand hand = new Hand(MAX);
 
@@ -47,13 +48,12 @@ public class HandTest {
             hand.add(new Card(ACE, HEARTS));
         }
 
-        assertEquals("La taille doit atteindre le maximum autorisé",
-                     MAX, hand.size());
-        assertTrue("Une main pleine doit être marquée comme pleine", hand.isFull());
+        assertEquals(MAX, hand.size(), "La taille doit atteindre le maximum autorisé");
+        assertTrue(hand.isFull(), "Une main pleine doit être marquée comme pleine");
     }
 
-    @Test(expected = AssertionError.class)
-    public void impossibleAjouterAuDelaDuMax() {
+    @Test
+    void impossibleAjouterAuDelaDuMax() {
         final int MAX = 5;
         IHand hand = new Hand(MAX);
 
@@ -62,6 +62,6 @@ public class HandTest {
         }
 
         // Doit lever une AssertionError
-        hand.add(new Card(ACE, HEARTS));
+        assertThrows(AssertionError.class, () -> hand.add(new Card(ACE, HEARTS)));
     }
 }

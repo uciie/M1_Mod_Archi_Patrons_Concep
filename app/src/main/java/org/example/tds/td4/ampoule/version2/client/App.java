@@ -1,8 +1,8 @@
-package org.example.ampoule.version2.client;
+package org.example.tds.td4.ampoule.version2.client;
 
 import java.util.function.Consumer;
 
-import org.example.ampoule.version2.api.Ampoule;
+import org.example.tds.td4.ampoule.version2.api.Ampoule;
 
 import io.vavr.control.Option;
 

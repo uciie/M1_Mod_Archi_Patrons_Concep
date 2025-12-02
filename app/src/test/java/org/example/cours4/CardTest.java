@@ -1,6 +1,6 @@
 package org.example.cours4;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,35 +18,35 @@ public class CardTest extends ICardTest {
     // on pourrait rajouter des property based testing sur les relations compareTo/equals/hashCode
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         aceOfHearts = new Card(ACE, HEARTS);
         twoOfHearts = new Card(TWO, HEARTS);
         twoOfSpades = new Card(TWO, SPADES);
     }
 
     @AfterEach
-    public void tearDown() {
+    void tearDown() {
         aceOfHearts = null;
         twoOfHearts = null;
         twoOfSpades = null;
     }
 
     @Test
-    public void rankIsCorrect() {
+    void rankIsCorrect() {
         assertEquals(ACE, aceOfHearts.rank());
         assertEquals(TWO, twoOfHearts.rank());
         assertEquals(TWO, twoOfSpades.rank());
     }
 
     @Test
-    public void suitIsCorrect() {
+    void suitIsCorrect() {
         assertEquals(HEARTS, aceOfHearts.suit());
         assertEquals(HEARTS, twoOfHearts.suit());
         assertEquals(SPADES, twoOfSpades.suit());
     }
 
     @Test
-    public void rankComparatorIsCorrect() {
+    void rankComparatorIsCorrect() {
         testRankComparator(aceOfHearts, twoOfHearts, -1);
         testRankComparator(aceOfHearts, aceOfHearts, 0);
         testRankComparator(twoOfHearts, aceOfHearts, 1);
@@ -55,7 +55,7 @@ public class CardTest extends ICardTest {
     }
 
     @Test
-    public void suitComparatorIsCorrect() {
+    void suitComparatorIsCorrect() {
         testSuitComparator(twoOfSpades, twoOfHearts, -1);
         testSuitComparator(twoOfHearts, twoOfHearts, 0);
         testSuitComparator(twoOfHearts, twoOfSpades, 1);
@@ -64,7 +64,7 @@ public class CardTest extends ICardTest {
     }
 
     @Test
-    public void rankAndThenSuitComparatorIsCorrect() {
+    void rankAndThenSuitComparatorIsCorrect() {
         testRankAndThenSuitComparator(aceOfHearts, twoOfHearts, -1);
         testRankAndThenSuitComparator(aceOfHearts, aceOfHearts, 0);
         testRankAndThenSuitComparator(twoOfHearts, aceOfHearts, 1);

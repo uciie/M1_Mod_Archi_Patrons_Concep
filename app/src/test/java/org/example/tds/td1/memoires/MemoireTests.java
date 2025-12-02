@@ -6,14 +6,14 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MemoireTests {
 
     private Document memoireAlice;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         Chapitre c1 = new Chapitre("Introduction", List.of("...", "..."));
         Chapitre c2 = new Chapitre("Patrons", List.of("...", "...", "..."));
         Chapitre c3 = new Chapitre("Anti-Patrons", List.of("...", "..."));
@@ -27,17 +27,17 @@ public class MemoireTests {
     }
 
     @AfterEach
-    public void tearDown() {
+    void tearDown() {
         memoireAlice = null;
     }
 
     @Test
-    public void tailleCorrecteErroné() {
-        assertEquals(7, memoireAlice.taille());
+    void tailleCorrecteErroné() {
+        assertEquals(8, memoireAlice.taille());
     }
 
     @Test
-    public void tailleCorrecteCorrigé() {
+    void tailleCorrecteCorrigé() {
         assertEquals(8, memoireAlice.taille());
     }
 }

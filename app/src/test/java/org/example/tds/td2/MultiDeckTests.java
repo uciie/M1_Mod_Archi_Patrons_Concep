@@ -1,6 +1,6 @@
 package org.example.tds.td2;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,12 +12,12 @@ public class MultiDeckTests {
     private MultiDeck multiDeck;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         multiDeck = new MultiDeck(NB);
     }
 
     @Test
-    public void tailleMultiDeck() {
+    void tailleMultiDeck() {
         // initialement on a 52 * le nombre de decks
         assertEquals(52 * NB, multiDeck.size());
         // si on tire n cartes on a 52*le nombre de decks - le nombre de cartes tirées
@@ -29,7 +29,7 @@ public class MultiDeckTests {
     }
 
     @AfterEach
-    public void tearDown() {
+    void tearDown() {
         multiDeck = null;
     }
 

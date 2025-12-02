@@ -8,8 +8,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.2'
-    implementation 'io.vavr:vavr:0.10.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.9.3'
+    implementation 'io.vavr:vavr:0.10.4'
 }
 
 application {
@@ -17,5 +18,5 @@ application {
 }
 
 test {
-    // Ne pas utiliser useJUnitPlatform() -> réservé à JUnit 5
+    useJUnitPlatform() // réservé à JUnit 5
 }
